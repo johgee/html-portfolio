@@ -3,46 +3,122 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Fundamentals</title>
+  <title>Mondrian Project</title>
   <style>
-    body {
-      font-family: sans-serif;
-    }
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
 
-    .container {
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       height: 100vh;
-      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    /* .box1 {
+      width: 320px;
+      height: 414px;
+      background-color: #e72f24;
+      border-right: 9px solid black;
+      border-bottom: 9px solid black;
     }
 
-    .item {
-      width: 200px;
-      margin: 20px;
-      background-color: #3498db;
-      color: #fff;
-      text-align: center;
-      line-height: 2;
-      font-size: 24px;
+    .box2{
+      width: 419px;
+      height: 414px;
+      background-color: #f0f1ec;
+      border-bottom: 9px solid black;
+    }
+
+    .box3{
+      display: block;
+      width: 320px;
+      height: 295px;
+      background-color: #f0f1ec;
+      border-bottom: 9px solid black;
+    }
+
+    .box4{
+      width: 351px;
+      height: 295;
+      background-color: #f0f1ec;
+      border-left: 9px solid black;
+      border-right: 9px solid black;
+      border-bottom: 9px solid black;
+    } */
+    .grid-container {
+      width: 748px;
+      height: 748px;      
+      display: grid;
+      background-color: #000;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      gap: 9px;
+    }
+
+    .box {
+      background-color: #f0f1ec;
+    }
+
+    .box1 {
+      background-color: #e72f24;
+    }
+
+    .box2 {
+      grid-column: span 3;
+    }
+
+    .box3{
+      grid-row: span2;
+    }
+
+    .box4 {
+      grid-area: 2 / 2 / 4 / 4
+    }
+
+    .box5 {
+      background-color: #004592;
+      border-bottom: 10px solid #000;
+    }
+
+    .box6 {
+      grid-row: span 2;
+    }
+
+    .box7 {
+      background-color: #f9d01e;
+    }
+
+    .box8 {
+      background-color: #232629;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Grid Sizing</h1>
-    <a class="item" href="./fixed-size.html">Fixed Size</a>
-    <a class="item" href="./auto-size.html">Auto Size</a>
-    <a class="item" href="./fractional-size.html">Fractional Size</a>
-    <a class="item" href="./minmax-size.html">MinMax Size</a>
-    <a class="item" href="./repeat.html">Repeat</a>
-    <a class="item" href="./test.html">Test</a>
-
-
+  <div class="grid-container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
   </div>
 </body>
 
